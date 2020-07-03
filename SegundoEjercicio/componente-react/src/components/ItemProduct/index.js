@@ -19,36 +19,29 @@ export const ItemProduct = ({ nombre, ascending, descending, index, id, moveCard
       }
       const dragIndex = item.index
       const hoverIndex = index
-      // No reemplace artículos con ellos mismos
+      
       if (dragIndex === hoverIndex) {
         return
       }
-      // Determinar rectángulo en pantalla
+      
       const hoverBoundingRect = ref.current?.getBoundingClientRect()
-      // Obtener vertical medio
+      
       const hoverMiddleY = (hoverBoundingRect.bottom - hoverBoundingRect.top) / 2
-      // Determinar la posición del mouse
+      
       const clientOffset = monitor.getClientOffset()
-      // Consigue píxeles en la parte superior
+      
       const hoverClientY = clientOffset.y - hoverBoundingRect.top
-      // Solo realiza el movimiento cuando el mouse haya cruzado la mitad de la altura de los elementos
-      // Al arrastrar hacia abajo, solo muévete cuando el cursor esté por debajo del 50%
-      // Al arrastrar hacia arriba, solo muévete cuando el cursor esté por encima del 50%
-      // Arrastrando hacia abajo
+      
       if (dragIndex < hoverIndex && hoverClientY < hoverMiddleY) {
         return
       }
-      // Arrastrando hacia arriba
+      
       if (dragIndex > hoverIndex && hoverClientY > hoverMiddleY) {
         return
       }
-      // Tiempo para realizar la acción.
+      
       moveCard(dragIndex, hoverIndex)
       
-      // Nota: ¡estamos mutando el elemento del monitor aquí!
-      // Generalmente es mejor evitar mutaciones,
-      // pero es bueno aquí por el rendimiento
-      // para evitar búsquedas costosas de índices.
       item.index = hoverIndex
     },
   })
