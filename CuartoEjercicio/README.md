@@ -14,7 +14,7 @@ Son una extensión de lenguaje JavaScript y nos ayudan a identificar en nuestro 
 
 ## 4. ¿Que diferencia hay entre una function y un arrow function de JavaScrip?
 
-Las diferencia es en el contexto en que se crean, por ejemplo una function normal cuando se llama hay se crea el contexto, en una arrow function el contexto se crea cuando se define, esto quiere decir que la palabra reservada *this* cuando se llama en una function normal como metodo *this* va pertenecer al metodo y cuando es un arrow function *this* siempre será en el contexto en que fue decalarada.
+Las diferencia es en el contexto en que se crean, por ejemplo una function normal cuando se llama hay se crea el contexto, en una arrow function el contexto se crea cuando se define, esto quiere decir que la palabra reservada *this* cuando se llama en una function normal como metodo, *this* va pertenecer al metodo y cuando es un arrow function, *this* siempre será en el contexto en que fue declarada.
 
 ## 5. ¿Que es Redux y como nos ayuda en los proyectos?
 
