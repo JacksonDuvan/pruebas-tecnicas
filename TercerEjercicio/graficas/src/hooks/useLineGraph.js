@@ -55,6 +55,9 @@ export const useLineGraph = (approved, pending, rejeted) => {
                 line: {
                     fill: false,
                     fontFamily: 'system-ui',
+                },
+                point: {
+                    borderWidth: 5,
                 }
             },
             layout: {
