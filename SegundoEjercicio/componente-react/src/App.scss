@@ -1,0 +1,55 @@
+.App{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 100vh;
+  &__ContainerRight{
+    background-color: #C8E5F0;
+    display: grid;
+    grid-template-rows: 250px 80px 1fr;
+  }
+  &__h3{
+    text-align: center;
+  }
+  &__list{
+    overflow-y: scroll;
+    height: 80vh;
+    width: 95%;
+  }
+  &__list2{
+    overflow-y: scroll;
+    height: 40vh;
+    width: 95%;
+  }
+}
+
+.btnContainer{
+  margin: 5px auto;
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+}
+
+%btn{
+  height: 40px;
+  border: 1px solid rgb(56, 56, 250);
+  border-radius: 5px;
+  outline: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+%btn:active{
+  transform: scale(.9);
+}
+
+.btnCancelar{
+  @extend %btn;
+  width: 100px;
+  background-color: white;
+  color: rgb(56, 56, 250);
+}
+.btnOk{
+  @extend %btn;
+  width: 60px;
+  background-color: rgb(56, 56, 250);
+  color: white;
+}

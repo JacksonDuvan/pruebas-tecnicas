@@ -1,0 +1,21 @@
+.order{
+    border: 1px solid transparent;
+    border-radius: 5px;
+    width: 90%;
+    margin: 5px auto;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &__icon{
+        display: flex;
+        align-items: center;
+    }
+    &__p{
+        font-weight: 500;
+    }
+    &__btn:active{
+        transform: scale(.9);
+    }
+}
